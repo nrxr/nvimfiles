@@ -14,4 +14,6 @@ Install [`rcm`](https://github.com/thoughtbot/rcm):
 
 Now install it with `rcm`:
 
-    env RCRC=$HOME/code/src/github.com/nrxr/nvimfiles/rcrc rcup -v
+    rcup $HOME/code/src/github.com/nrxr/nvimfiles \
+      -v -t nvim \
+      -x README*.md -x LICENSE

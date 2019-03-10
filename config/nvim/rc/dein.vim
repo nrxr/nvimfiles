@@ -18,6 +18,7 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('tpope/vim-git')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('mhinz/vim-signify')
 
   call dein#add('ctrlpvim/ctrlp.vim')
 

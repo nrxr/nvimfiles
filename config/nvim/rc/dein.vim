@@ -48,6 +48,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('junegunn/goyo.vim')
   call dein#add('junegunn/fzf.vim')
 
+  call dein#add('godlygeek/tabular')
+  call dein#add('plasticboy/vim-markdown')
   call dein#add('mzlogin/vim-markdown-toc')
 
   call dein#add('arcticicestudio/nord-vim')

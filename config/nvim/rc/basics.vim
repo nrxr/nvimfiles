@@ -96,7 +96,7 @@ augroup py
 augroup END
 
 augroup md
-  autocmd BufNewFile,BufRead *.md set expandtab tw=80
+  autocmd BufNewFile,BufRead *.md set expandtab tw=80 filetype=markdown
 augroup END
 
 augroup tex

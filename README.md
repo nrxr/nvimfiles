@@ -9,8 +9,12 @@ Clone into your terminal:
 
 Install [`rcm`](https://github.com/thoughtbot/rcm):
 
+    # macOS
     brew tap thoughtbot/formulae
     brew install rcm
+
+    # voidlinux
+    sudo xbps-install -S rcm
 
 Now install it with `rcm`:
 

@@ -29,7 +29,7 @@ Install [`rcm`](https://github.com/thoughtbot/rcm):
 
 ## Installing the `nvim` configuration files with `rcm`
 
-    rcup -d . \
+    rcup -d $HOME/code/src/github.com/nrxr/nvimfiles \
       -v -t nvim \
       -x README*.md -x LICENSE -x pre-setup.sh
 

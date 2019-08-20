@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-if [ "$(uname)" = "Darwin" ]; then
+if [ "$(uname -o)" = "Darwin" ]; then
   OS='mac'
-elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+elif [ "$(uname -o)" = "Linux" ]; then
   OS='linux'
 fi
 
@@ -13,7 +13,7 @@ runrcup() {
     -x README*.md -x LICENSE -x pre-setup.sh
 }
 
-isinstalled=`which rcup`
+isinstalled=$(command -v rcup)
 
 if [ "${OS}" = "mac" ]; then
   if [ "$isinstalled" = "rcup not found" ]; then

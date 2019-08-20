@@ -8,9 +8,9 @@ fi
 
 runrcup() {
   printf "running rcup...\n"
-  rcup $HOME/code/src/github.com/nrxr/nvimfiles \
+  rcup -d . \
     -v -t nvim \
-    -x README*.md -x LICENSE
+    -x README*.md -x LICENSE -x pre-setup.sh
 }
 
 isinstalled=`which rcup`

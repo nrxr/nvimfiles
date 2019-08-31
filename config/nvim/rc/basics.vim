@@ -120,6 +120,10 @@ colorscheme nord
 let g:nord_comment_brightness = 12
 let g:nord_italic = 1
 
+let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_conceal = 0
+
+
 " taken from http://robots.thoughtbot.com/faster-grepping-in-vim
 "
 " The Silver Searcher

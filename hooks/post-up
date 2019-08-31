@@ -1,4 +1,7 @@
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+if [ ! -f installer.sh ]; then
+  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+fi
+
 sh ./installer.sh ~/.cache/dein
 
 nvim +"call dein#install()" +qall

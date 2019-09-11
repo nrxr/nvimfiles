@@ -8,11 +8,12 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
 
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
+
+  "call dein#add('Shougo/deoplete.nvim')
+  " if !has('nvim')
+   " call dein#add('roxma/nvim-yarp')
+   " call dein#add('roxma/vim-hug-neovim-rpc')
+  "endif
 
   call dein#add('wsdjeg/dein-ui.vim')
 
@@ -38,6 +39,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('stephpy/vim-yaml')
 
   call dein#add('fatih/vim-go')
+  call dein#add('neoclide/coc.nvim', {'merge': 0, 'rev': 'release' })
 
   call dein#add('majutsushi/tagbar')
 

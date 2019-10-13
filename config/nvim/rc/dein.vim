@@ -56,6 +56,8 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('arcticicestudio/nord-vim')
 
+  call dein#add('dag/vim-fish')
+
   call dein#end()
   call dein#save_state()
 endif

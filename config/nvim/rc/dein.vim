@@ -58,6 +58,8 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('dag/vim-fish')
 
+  call dein#add('rust-lang/rust.vim')
+
   call dein#end()
   call dein#save_state()
 endif

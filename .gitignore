@@ -1,2 +1,3 @@
 hooks/installer.sh
+hooks/post-up/installer.sh
 pre-setup.sh

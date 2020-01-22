@@ -9,12 +9,6 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-  "call dein#add('Shougo/deoplete.nvim')
-  " if !has('nvim')
-   " call dein#add('roxma/nvim-yarp')
-   " call dein#add('roxma/vim-hug-neovim-rpc')
-  "endif
-
   call dein#add('wsdjeg/dein-ui.vim')
 
   call dein#add('tpope/vim-git')
@@ -55,11 +49,18 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mzlogin/vim-markdown-toc')
 
   call dein#add('arcticicestudio/nord-vim')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('sonph/onehalf', {'rtp': 'vim/'})
 
   call dein#add('dag/vim-fish')
 
   call dein#add('rust-lang/rust.vim')
 
+  call dein#add('hashivim/vim-terraform')
+
   call dein#end()
   call dein#save_state()
 endif
+
+filetype plugin indent on
+syntax enable

@@ -116,9 +116,10 @@ filetype plugin on
 syntax on
 syntax enable
 set t_Co=256
-colorscheme nord
-let g:nord_comment_brightness = 12
-let g:nord_italic = 1
+colorscheme solarized
+set background=dark
+" let g:nord_comment_brightness = 12
+" let g:nord_italic = 1
 
 let g:vim_markdown_conceal_code_blocks = 0
 let g:vim_markdown_conceal = 0

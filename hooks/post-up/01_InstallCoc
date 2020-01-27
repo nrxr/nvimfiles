@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+nvim +"CocInstall coc-json coc-lists coc-snippets coc-git coc-yank coc-html coc-css coc-rls"

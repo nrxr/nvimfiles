@@ -1,4 +1,4 @@
-source ~/.config/nvim/rc/dein.vim
+source ~/.config/nvim/rc/vim-plug.vim
 
 source ~/.config/nvim/rc/basics.vim
 source ~/.config/nvim/rc/plugin-ctrlp.vim

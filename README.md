@@ -4,13 +4,13 @@ These are configurations for `nvim`.
 
 Run on a sh-compatible terminal (for a quick install):
 
-    sh ./pre-setup.sh
+    sh ./install.sh
 
 This will install (hopefully) `rcm` if you don't have it and then configure
 everything with it using the tag `nvim`.
 
 If you want to update, then pull from the git repository and run the
-`pre-setup.sh` script again.
+`install.sh` script again.
 
 If you want to know what's happening inside (or are using a linux different than
 voidlinux), then:

@@ -37,7 +37,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'rhysd/vim-gfm-syntax'
 Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'arcticicestudio/nord-vim'

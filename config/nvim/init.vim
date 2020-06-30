@@ -1,6 +1,7 @@
 source ~/.config/nvim/rc/vim-plug.vim
 
 source ~/.config/nvim/rc/basics.vim
+source ~/.config/nvim/rc/colors.vim
 source ~/.config/nvim/rc/plugin-ctrlp.vim
 source ~/.config/nvim/rc/plugin-deoplete.vim
 source ~/.config/nvim/rc/plugin-easyalign.vim

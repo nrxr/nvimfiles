@@ -1,13 +1,15 @@
 set t_Co=256
-" colorscheme solarized
-" set background=dark
+colorscheme solarized
+set background=dark
 " set background=light
 
+" colorscheme nord
 " let g:nord_comment_brightness = 12
 " let g:nord_italic = 1
 
+" colorscheme halcyon
 set cursorline
-colorscheme onehalflight
+" colorscheme onehalflight
 " colorscheme onehalfdark
 
 " colorscheme one

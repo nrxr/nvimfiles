@@ -44,6 +44,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'rakr/vim-one'
+Plug 'NieTiger/halcyon-neovim'
 
 Plug 'dag/vim-fish'
 

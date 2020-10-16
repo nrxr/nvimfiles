@@ -1,6 +1,6 @@
 set laststatus=2
 let g:lightline = {
-  \ 'colorscheme': 'onehalfdark',
+  \ 'colorscheme': 'solarized',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'fugitive', 'readonly', 'filename', 'modified' ]]

@@ -68,3 +68,5 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
+
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-lists', 'coc-snippets', 'coc-yank', 'coc-html', 'coc-css', 'coc-rls', 'coc-tsserver', 'coc-go', 'coc-prettier', 'coc-eslint']

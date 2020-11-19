@@ -7,6 +7,8 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
+Plug 'Yggdroot/indentLine'
+
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'mattn/webapi-vim'
@@ -24,6 +26,10 @@ Plug 'ekalinin/Dockerfile.vim'
 
 Plug 'stephpy/vim-yaml'
 
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'jparise/vim-graphql'
+
 Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
@@ -36,7 +42,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plug 'godlygeek/tabular'
 Plug 'rhysd/vim-gfm-syntax'
 Plug 'mzlogin/vim-markdown-toc'
 

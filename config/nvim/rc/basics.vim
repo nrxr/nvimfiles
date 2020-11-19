@@ -1,5 +1,6 @@
 " Syntax always on, I like colors
 syn on
+syntax sync fromstart
 
 " No vi-compatible mode, this way things like modelines works 
 " out-of-the-box on more stuff

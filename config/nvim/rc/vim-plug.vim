@@ -16,8 +16,6 @@ Plug 'mattn/gist-vim'
 
 Plug 'scrooloose/syntastic'
 
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'ghostbar/vim-snippets'
 
 Plug 'embear/vim-localvimrc'

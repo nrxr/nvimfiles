@@ -75,6 +75,11 @@ set softtabstop=2
 " Insert tabs at the start of a line according to shiftwidth, not tabstop
 set smarttab
 
+set showbreak=↪\ 
+" set list listchars=tab:┆\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set list listchars=tab:┆\ ,nbsp:␣,trail:↲,extends:⟩,precedes:⟨
+
+
 filetype off
 
 " Load indentation rules according to filetype

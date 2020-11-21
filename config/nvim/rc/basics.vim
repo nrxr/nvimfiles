@@ -118,6 +118,10 @@ augroup golang
   autocmd BufNewFile,BufRead *.go set noexpandtab sw=4 ts=4 sts=4
 augroup END
 
+augroup snippets
+  autocmd BufNewFile,BufRead *.snippets set noexpandtab sw=4 ts=4 sts=4
+augroup END
+
 filetype plugin on
 
 syntax on

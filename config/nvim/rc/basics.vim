@@ -94,6 +94,10 @@ augroup js
   autocmd BufNewFile,BufRead *.js set expandtab
 augroup END
 
+augroup ts
+  autocmd BufNewFile,BufRead *.ts set expandtab
+augroup END
+
 augroup json
   autocmd BufNewFile,BufRead *.json set conceallevel=0
 augroup END

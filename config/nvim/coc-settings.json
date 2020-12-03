@@ -1,24 +1,31 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "go",
-    "json",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["go", "js", "ts"],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnTypeFiletypes": [
-    "go",
-    "json",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "coc.preferences.formatOnTypeFiletypes": ["go", "js", "ts"],
 
   "go.goplsOptions": {
     "completeUnimported": true
+  },
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        },
+        "client": {
+          "snippetSupport": true
+        }
+      }
+    }
   }
 }

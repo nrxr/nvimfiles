@@ -1,22 +1,8 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "go",
-    "json",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["go"],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnTypeFiletypes": [
-    "go",
-    "json",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "coc.preferences.formatOnTypeFiletypes": ["go"],
 
   "go.goplsOptions": {
     "completeUnimported": true

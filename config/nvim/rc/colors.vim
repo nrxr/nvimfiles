@@ -1,7 +1,14 @@
 set t_Co=256
-colorscheme solarized
-set background=dark
-" set background=light
+set termguicolors
+
+" colorscheme solarized
+
+
+let g:gruvbox_italic=1
+
+colorscheme gruvbox
+" set background=dark
+set background=light
 
 " colorscheme nord
 " let g:nord_comment_brightness = 12

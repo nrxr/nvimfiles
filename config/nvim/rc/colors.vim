@@ -1,6 +1,6 @@
 set t_Co=256
-" colorscheme solarized
-" set background=dark
+colorscheme solarized
+set background=dark
 " set background=light
 
 " colorscheme nord
@@ -17,5 +17,5 @@ set cursorline
 " set background=light
 " let g:one_allow_italics = 1
 
-set background=light
-colorscheme PaperColor
+" set background=light
+" colorscheme PaperColor

@@ -49,6 +49,7 @@ Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'rakr/vim-one'
 Plug 'NieTiger/halcyon-neovim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 Plug 'dag/vim-fish'
 

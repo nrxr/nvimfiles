@@ -1,6 +1,9 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["go", "js", "ts"],
   "tsserver.formatOnType": true,
+  "tsserver.enableJavascript": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.autoFix": true,
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnTypeFiletypes": ["go", "js", "ts"],
 

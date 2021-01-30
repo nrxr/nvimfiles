@@ -1,8 +1,6 @@
-set t_Co=256
-set termguicolors
-
 " colorscheme solarized
-
+" set background=dark
+" set background=light
 
 let g:gruvbox_italic=1
 
@@ -15,7 +13,6 @@ set background=light
 " let g:nord_italic = 1
 
 " colorscheme halcyon
-set cursorline
 " colorscheme onehalflight
 " colorscheme onehalfdark
 
@@ -26,3 +23,5 @@ set cursorline
 
 " set background=light
 " colorscheme PaperColor
+set termguicolors
+set cursorline

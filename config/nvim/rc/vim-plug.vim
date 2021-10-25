@@ -7,7 +7,8 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -39,7 +40,12 @@ Plug 'majutsushi/tagbar'
 
 Plug 'junegunn/vim-easy-align'
 
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
+
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
+
 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -54,6 +60,9 @@ Plug 'rakr/vim-one'
 Plug 'NieTiger/halcyon-neovim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Mofiqul/vscode.nvim'
 
 Plug 'dag/vim-fish'
 

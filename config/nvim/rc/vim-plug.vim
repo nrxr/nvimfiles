@@ -28,10 +28,10 @@ Plug 'stephpy/vim-yaml'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
-Plug 'heavenshell/vim-jsdoc', { 
-  \ 'for': ['javascript', 'javascript.jsx','typescript'], 
-  \ 'do': 'make install'
-\}
+" Plug 'heavenshell/vim-jsdoc', { 
+"   \ 'for': ['javascript', 'javascript.jsx','typescript'], 
+"  \ 'do': 'make install'
+"\}
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -48,7 +48,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'rhysd/vim-gfm-syntax'
 Plug 'mzlogin/vim-markdown-toc'

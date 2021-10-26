@@ -16,18 +16,18 @@
 " colorscheme onehalflight
 " colorscheme onehalfdark
 
-colorscheme one
+" colorscheme one
 " set background=dark
-set background=light
-let g:one_allow_italics = 1
+" set background=light
+" let g:one_allow_italics = 1
 set t_Co=256
 
 " set background=light
 " colorscheme PaperColor
 
-" let g:material_theme_style = 'lighter'
-" let g:material_terminal_italics = 1
-" colorscheme material
+let g:material_theme_style = 'darker'
+let g:material_terminal_italics = 1
+colorscheme material
 
 " colorscheme dracula
 

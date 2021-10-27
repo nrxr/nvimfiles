@@ -13,3 +13,4 @@ source ~/.config/nvim/rc/plugin-syntastic.vim
 source ~/.config/nvim/rc/plugin-tagbar.vim
 source ~/.config/nvim/rc/plugin-vim-go.vim
 source ~/.config/nvim/rc/plugin-coc.vim
+source ~/.config/nvim/rc/plugin-bufferline.vim

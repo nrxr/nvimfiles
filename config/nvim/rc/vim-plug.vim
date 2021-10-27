@@ -71,6 +71,9 @@ Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
 
 Plug 'hashivim/vim-terraform'
+
+Plug 'akinsho/bufferline.nvim'
+
 call plug#end()
 
 filetype plugin indent on

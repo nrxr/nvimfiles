@@ -25,17 +25,17 @@ set t_Co=256
 " set background=light
 " colorscheme PaperColor
 
-let g:material_theme_style = 'darker'
-let g:material_terminal_italics = 1
-colorscheme material
+" let g:material_theme_style = 'darker'
+" let g:material_terminal_italics = 1
+" colorscheme material
 
 " colorscheme dracula
 
 " For dark theme
 " let g:vscode_style = "dark"
 " For light theme
-" let g:vscode_style = "light"
-" colorscheme vscode
+let g:vscode_style = "light"
+colorscheme vscode
 
 " Fix italics in Vim
 if !has('nvim')

@@ -40,11 +40,11 @@ Plug 'majutsushi/tagbar'
 
 Plug 'junegunn/vim-easy-align'
 
-" Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 
-Plug 'nvim-lualine/lualine.nvim'
+" Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
-Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'kyazdani42/nvim-web-devicons'
 
 
 Plug 'junegunn/goyo.vim'

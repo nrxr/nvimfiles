@@ -55,7 +55,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'rhysd/vim-gfm-syntax'
 Plug 'mzlogin/vim-markdown-toc'
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim', { 'branch': 'main' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'rakr/vim-one'
@@ -72,7 +72,9 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'hashivim/vim-terraform'
 
-Plug 'akinsho/bufferline.nvim'
+" Plug 'akinsho/bufferline.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+
 
 call plug#end()
 

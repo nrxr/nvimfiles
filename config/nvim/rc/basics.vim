@@ -40,18 +40,21 @@ if &term == "screen"
   set term=xterm
 endif
 
-" copy to attached terminal using the yank(1) script:
-" https://github.com/sunaku/home/blob/master/bin/yank
-function! Yank(text) abort
-  let escape = system('yank', a:text)
-  if v:shell_error
-    echoerr escape
-  else
-    call writefile([escape], '/dev/tty', 'b')
-  endif
-endfunction
+if has("mac")
+  " copy to attached terminal using the yank(1) script:
+  " https://github.com/sunaku/home/blob/master/bin/yank
+  " UPDATE: there's no need to call yank, but call pbcopy right away.
+  function! Yank(text) abort
+    let escape = system('pbcopy', a:text)
+    if v:shell_error
+      echoerr escape
+    else
+      call writefile([escape], '/dev/tty', 'b')
+    endif
+  endfunction
 
-noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
+  noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
+endif
 
 " Search related stuff
 " use incremental search

@@ -35,11 +35,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Making vim work as should while using tmux with $TERM="screen"
-if &term == "screen"
-  set term=xterm
-endif
-
 if has("mac")
   " copy to attached terminal using the yank(1) script:
   " https://github.com/sunaku/home/blob/master/bin/yank

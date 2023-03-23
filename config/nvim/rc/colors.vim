@@ -1,9 +1,36 @@
-" colorscheme solarized
+set t_Co=256
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+" Fix italics in Vim
+
+" set t_ZH=^[[3m
+" set t_ZR=^[[23m
+
+" let &t_ZH="\e[3m"
+" let &t_ZR="\e[23m"
+
+" highlight Comment cterm=italic
+
+
+" let g:solarized_termcolors=16
+" g:solarized_termcolors= 16 | 256 
+" g:solarized_termtrans = 0 | 1
+" g:solarized_degrade = 0 | 1 
+" g:solarized_bold = 1 | 0 
+" g:solarized_underline = 1 | 0 
+" g:solarized_italic = 1 | 0 
+" g:solarized_contrast = "normal"| "high" or "low" 
+" g:solarized_visibility= "normal"| "high" or "low"
+
+
 " set background=dark
+" colorscheme solarized
 " set background=light
 
 " let g:gruvbox_italic=1
-
 " colorscheme gruvbox
 " set background=dark
 " set background=light
@@ -20,42 +47,27 @@
 " set background=dark
 " set background=light
 " let g:one_allow_italics = 1
-set t_Co=256
 
 " set background=light
 " colorscheme PaperColor
 
-" let g:material_theme_style = 'darker'
+" let g:material_theme_style = 'lighter'
 " let g:material_terminal_italics = 1
 " colorscheme material
 
 " colorscheme dracula
 
-" For dark theme
-" let g:vscode_style = "dark"
-" For light theme
-" let g:vscode_style = "light"
-colorscheme vscode
-" For dark theme (neovim's default)
-" set background=dark
-" For light theme
-set background=light
-" Enable transparent background
-let g:vscode_transparency = 1
-" Enable italic comment
-let g:vscode_italic_comment = 1
-" Disable nvim-tree background color
-" let g:vscode_disable_nvimtree_bg = v:true
+lua << EOF
 
+local c = require('vscode.colors').get_colors()
+require('vscode').setup({
+    style = 'light',
+    transparent = true,
+    italic_comments = true,
+    disable_nvimtree_bg = true,
+})
+require('vscode').load()
 
-" Fix italics in Vim
-if !has('nvim')
-  let &t_ZH="\e[3m"
-  let &t_ZR="\e[23m"
-endif
-
-if (has('termguicolors'))
-  set termguicolors
-endif
+EOF
 
 set cursorline

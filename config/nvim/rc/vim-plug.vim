@@ -56,7 +56,7 @@ Plug 'rhysd/vim-gfm-syntax'
 Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'arcticicestudio/nord-vim', { 'branch': 'main' }
-Plug 'altercation/vim-colors-solarized'
+Plug 'shaunsingh/solarized.nvim'
 Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'rakr/vim-one'
 Plug 'NieTiger/halcyon-neovim'

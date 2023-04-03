@@ -11,6 +11,8 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
+-- gopls configuration
+-- ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-v050
 lspconfig.gopls.setup{
 	cmd = {'gopls'},
 	-- for postfix snippets and analyzers
@@ -19,8 +21,10 @@ lspconfig.gopls.setup{
 	      gopls = {
 		      experimentalPostfixCompletions = true,
 		      analyses = {
+            -- ref: https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
 		        unusedparams = true,
 		        shadow = true,
+            unusedvariable = true,
 		     },
 		     staticcheck = true,
          hoverKind = "FullDocumentation",
@@ -30,6 +34,14 @@ lspconfig.gopls.setup{
 	on_attach = on_attach,
 }
 
+-- organize imports on save with goimports logic
+-- ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#imports
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.go',
+  callback = function()
+    vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })
+  end
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

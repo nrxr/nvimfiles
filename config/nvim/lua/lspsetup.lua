@@ -11,6 +11,10 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
+require'lspconfig'.terraformls.setup{
+  capabilities = capabilities,
+}
+
 -- gopls configuration
 -- ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-v050
 lspconfig.gopls.setup{

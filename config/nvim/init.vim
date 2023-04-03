@@ -1,4 +1,9 @@
-source ~/.config/nvim/rc/vim-plug.vim
+" we are using packer for loading plugins
+lua require('plugins')
+
+lua require('completion')
+lua require('lspsetup')
+
 
 source ~/.config/nvim/rc/basics.vim
 source ~/.config/nvim/rc/colors.vim
@@ -12,5 +17,5 @@ source ~/.config/nvim/rc/plugin-lvimrc.vim
 source ~/.config/nvim/rc/plugin-syntastic.vim
 source ~/.config/nvim/rc/plugin-tagbar.vim
 source ~/.config/nvim/rc/plugin-vim-go.vim
-source ~/.config/nvim/rc/plugin-coc.vim
+
 source ~/.config/nvim/rc/plugin-bufferline.vim

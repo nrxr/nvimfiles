@@ -19,22 +19,24 @@ require'lspconfig'.terraformls.setup{
 -- ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-v050
 lspconfig.gopls.setup{
 	cmd = {'gopls'},
-	-- for postfix snippets and analyzers
+  filetypes = {"go", "gomod", "gowork", "gotmpl"},
 	capabilities = capabilities,
-	    settings = {
-	      gopls = {
-		      experimentalPostfixCompletions = true,
-		      analyses = {
-            -- ref: https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
-		        unusedparams = true,
-		        shadow = true,
-            unusedvariable = true,
-		     },
-		     staticcheck = true,
-         hoverKind = "FullDocumentation",
-         usePlaceholders = true
-		    },
-	    },
+	-- for postfix snippets and analyzers
+  settings = {
+    gopls = {
+      experimentalPostfixCompletions = true,
+      gofumpt = true,
+      analyses = {
+        -- ref: https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
+        unusedparams = true,
+        shadow = true,
+        unusedvariable = true,
+     },
+     staticcheck = true,
+     hoverKind = "FullDocumentation",
+     usePlaceholders = true
+    },
+  },
 	on_attach = on_attach,
 }
 

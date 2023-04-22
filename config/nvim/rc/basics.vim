@@ -35,21 +35,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-if has("mac")
-  " copy to attached terminal using the yank(1) script:
-  " https://github.com/sunaku/home/blob/master/bin/yank
-  " UPDATE: there's no need to call yank, but call pbcopy right away.
-  function! Yank(text) abort
-    let escape = system('pbcopy', a:text)
-    if v:shell_error
-      echoerr escape
-    else
-      call writefile([escape], '/dev/tty', 'b')
-    endif
-  endfunction
-
-  noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
-endif
+" The unnamedplus clipboard makes the default neovim clipboard be combined
+" with the system-integrated clipboard. Using the regular y you'll yank to
+" Mac's pbcopy right away.
+set clipboard+=unnamedplus
 
 " Search related stuff
 " use incremental search

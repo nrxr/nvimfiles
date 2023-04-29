@@ -64,7 +64,7 @@ require('material').setup({
 })
 
 -- material styles: darker, lighter, oceanic, palenight, deep ocean
-vim.g.material_style = 'lighter'
+vim.g.material_style = 'palenight'
 
 -- vim.cmd 'colorscheme material'
 
@@ -72,8 +72,8 @@ vim.g.material_style = 'lighter'
 --
 local c = require('vscode.colors').get_colors()
 require('vscode').setup({
-  style = 'light',
-  transparent = false,
+  style = 'dark',
+  transparent = true,
   italic_comments = true,
   disable_nvimtree_bg = true,
 })

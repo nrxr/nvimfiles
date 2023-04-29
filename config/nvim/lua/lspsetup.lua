@@ -11,8 +11,18 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
-require'lspconfig'.terraformls.setup{
+lspconfig.terraformls.setup{
   capabilities = capabilities,
+}
+
+-- C, C++ LSP server.
+lspconfig.ccls.setup{
+  capabilities = capabilities,
+  init_options = {
+    cache = {
+      directory = ".ccls-cache",
+    },
+  },
 }
 
 -- gopls configuration
@@ -24,20 +34,27 @@ lspconfig.gopls.setup{
 	-- for postfix snippets and analyzers
   settings = {
     gopls = {
-      experimentalPostfixCompletions = true,
-      gofumpt = true,
       analyses = {
         -- ref: https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
         unusedparams = true,
         shadow = true,
         unusedvariable = true,
-     },
-     staticcheck = true,
-     hoverKind = "FullDocumentation",
-     usePlaceholders = true
+      },
+      experimentalPostfixCompletions = true,
+      gofumpt = true,
+      staticcheck = true,
+      hoverKind = "FullDocumentation",
+      usePlaceholders = true
     },
   },
-	on_attach = on_attach,
+	on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = { '*.go', 'go.mod' },
+      callback = function()
+        vim.lsp.buf.format({ async = false })
+      end
+    })
+  end,
 }
 
 -- organize imports on save with goimports logic
@@ -45,7 +62,12 @@ lspconfig.gopls.setup{
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*.go',
   callback = function()
-    vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })
+    vim.lsp.buf.code_action({
+      context = {
+        only = { 'source.organizeImports' } 
+      },
+      apply = true,
+    })
   end
 })
 

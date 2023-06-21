@@ -4,11 +4,14 @@ lua require('plugins')
 lua require('completion')
 lua require('lspsetup')
 
+lua require('telescope-setup')
 
 source ~/.config/nvim/rc/basics.vim
 source ~/.config/nvim/rc/colors.vim
 
 lua require('themes')
+
+source ~/.config/nvim/rc/plugin-luasnip.vim
 source ~/.config/nvim/rc/plugin-ctrlp.vim
 source ~/.config/nvim/rc/plugin-easyalign.vim
 source ~/.config/nvim/rc/plugin-fzf.vim

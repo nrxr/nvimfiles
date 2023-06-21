@@ -7,6 +7,14 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- plenary, required by a lot of plugins
+  use "nvim-lua/plenary.nvim"
+  use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.1',
+  }
+
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
   -- autocompletion
@@ -16,28 +24,18 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
 
+  -- For luasnip users.
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
   -- snippets
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
-
-
-  -- Plugins can have post-install/update hooks
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+  use 'rafamadriz/friendly-snippets'
 
   use 'tpope/vim-git'
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
 
   use 'lukas-reineke/indent-blankline.nvim'
-
-  use 'ctrlpvim/ctrlp.vim'
-
-  use 'mattn/webapi-vim'
-  use 'mattn/gist-vim'
-
-  use 'scrooloose/syntastic'
-
-  use 'ghostbar/vim-snippets'
 
   use 'embear/vim-localvimrc'
 
@@ -50,32 +48,16 @@ return require('packer').startup(function(use)
   use 'jparise/vim-graphql'
 
   use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
-  -- use { 'neoclide/coc.nvim', branch: 'release' }
-
-  use 'majutsushi/tagbar'
 
   use 'junegunn/vim-easy-align'
 
   use 'itchyny/lightline.vim'
 
-  use 'junegunn/goyo.vim'
-
-  use { 'junegunn/fzf', run = function() vim.fn['fzf#install()'](0) end }
-  use 'junegunn/fzf.vim'
-
   use 'rhysd/vim-gfm-syntax'
   use 'mzlogin/vim-markdown-toc'
 
-  -- use 'arcticicestudio/nord-vim', { 'branch': 'main' }
-  -- use 'shaunsingh/solarized.nvim'
-  -- use 'sonph/onehalf', { 'rtp': 'vim/' }
-  -- use 'rakr/vim-one'
-  -- use 'NieTiger/halcyon-neovim'
-  -- use 'NLKNguyen/papercolor-theme'
-  -- use 'morhetz/gruvbox'
-  -- use 'kaicataldo/material.vim', { 'branch': 'main' }
-  -- use 'dracula/vim', { 'as': 'dracula' }
   use 'Mofiqul/vscode.nvim'
+  use 'marko-cerovac/material.nvim'
 
   use 'dag/vim-fish'
 

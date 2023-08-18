@@ -11,13 +11,13 @@ require('material').setup({
     },
 
     styles = { -- Give comments style such as bold, italic, underline etc.
-        comments = { --[[ italic = true ]] },
+        comments = { italic = true },
         strings = { --[[ bold = true ]] },
-        keywords = { --[[ underline = true ]] },
-        functions = { --[[ bold = true, undercurl = true ]] },
+        keywords = { italic = true },
+        functions = { bold = true, underline = false },
         variables = {},
         operators = {},
-        types = {},
+        types = { italic = true },
     },
 
     plugins = { -- Uncomment the plugins that you use to highlight them
@@ -64,17 +64,17 @@ require('material').setup({
 })
 
 -- material styles: darker, lighter, oceanic, palenight, deep ocean
--- vim.g.material_style = 'lighter'
--- vim.cmd 'colorscheme material'
+vim.g.material_style = 'palenight'
+vim.cmd 'colorscheme material'
 
 -- vscode
 --
-local c = require('vscode.colors').get_colors()
-require('vscode').setup({
-  style = 'light',
-  transparent = true,
-  italic_comments = true,
-  disable_nvimtree_bg = true,
-})
-
-require('vscode').load()
+--local c = require('vscode.colors').get_colors()
+--require('vscode').setup({
+--  style = 'light',
+--  transparent = true,
+--  italic_comments = true,
+--  disable_nvimtree_bg = true,
+--})
+--
+--require('vscode').load()

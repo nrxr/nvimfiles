@@ -13,11 +13,11 @@ require('material').setup({
     styles = { -- Give comments style such as bold, italic, underline etc.
         comments = { italic = true },
         strings = { --[[ bold = true ]] },
-        keywords = { italic = true },
+        keywords = { bold = true },
         functions = { bold = true, underline = false },
         variables = {},
         operators = {},
-        types = { italic = true },
+        types = { bold = true },
     },
 
     plugins = { -- Uncomment the plugins that you use to highlight them
@@ -36,7 +36,7 @@ require('material').setup({
         -- "nvim-tree",
         -- "nvim-web-devicons",
         -- "sneak",
-        -- "telescope",
+        "telescope",
         -- "trouble",
         -- "which-key",
     },
@@ -69,12 +69,16 @@ vim.cmd 'colorscheme material'
 
 -- vscode
 --
---local c = require('vscode.colors').get_colors()
---require('vscode').setup({
---  style = 'light',
---  transparent = true,
---  italic_comments = true,
---  disable_nvimtree_bg = true,
---})
---
---require('vscode').load()
+-- vim.o.background = 'light'
+-- 
+-- local c = require('vscode.colors').get_colors()
+-- require('vscode').setup({
+--   italic_comments = true,
+--   disable_nvimtree_bg = true,
+-- 
+-- --  group_overrides = {
+-- --        Comment = { fg = c.vscGreen, bg = 'NONE', gui=italic, cterm=italic, italic=true }
+-- --  }
+-- })
+-- 
+-- require('vscode').load()

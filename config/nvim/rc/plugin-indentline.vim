@@ -15,17 +15,21 @@ vim.opt.termguicolors = true
 -- vim.cmd [[highlight IndentBlanklineIndent1 guibg=white gui=nocombine]]
 -- vim.cmd [[highlight IndentBlanklineIndent2 guibg=white gui=nocombine]]
 
-require("indent_blankline").setup {
-    char = "┊",
-    space_char_blankline = " ",
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
+require("ibl").setup {
+    indent = {
+      highlight = {
+        "CursorColumn",
+        "Whitespace",
+      },
+      char = "┊"
     },
-    space_char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
+    whitespace = {
+      highlight = {
+        "CursorColumn",
+        "Whitespace",
+      },
+      remove_blankline_trail = false,
     },
-    show_trailing_blankline_indent = false,
+    scope = { enabled = false },
 }
 END

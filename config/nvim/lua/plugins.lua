@@ -56,8 +56,9 @@ return require('packer').startup(function(use)
   use 'rhysd/vim-gfm-syntax'
   use 'mzlogin/vim-markdown-toc'
 
-  use 'Mofiqul/vscode.nvim'
-  use 'marko-cerovac/material.nvim'
+  -- use 'Mofiqul/vscode.nvim'
+  -- use 'marko-cerovac/material.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   use 'dag/vim-fish'
 
@@ -66,5 +67,4 @@ return require('packer').startup(function(use)
   use 'hashivim/vim-terraform'
 
   use { 'akinsho/bufferline.nvim', tag = 'v2.*' }
-
 end)

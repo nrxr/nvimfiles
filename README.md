@@ -49,4 +49,4 @@ Manually updating can be done by running `pre-setup.sh` again or this same line.
 
 ## License
 
-© 2019, nrxr `<nrxr@disroot.org>`. Released under the MIT license terms.
+© 2019-2024, nrxr `<public@nrxr.org>`. Released under the MIT license terms.

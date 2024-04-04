@@ -1,9 +1,9 @@
 require("catppuccin").setup({
-    flavour = "latte", -- latte, frappe, macchiato, mocha
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
     -- flavour = "auto" -- will respect terminal's background
     background = { -- :h background
         light = "latte",
-        dark = "mocha",
+        dark = "frappe",
     },
     transparent_background = false, -- disables setting the background color.
     show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
@@ -19,9 +19,9 @@ require("catppuccin").setup({
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
         comments = { "italic" }, -- Change the style of comments
         conditionals = { "italic" },
-        loops = {},
-        functions = {},
-        keywords = {},
+        loops = { "italic" },
+        functions = { "italic" },
+        keywords = { "italic" },
         strings = {},
         variables = {},
         numbers = {},

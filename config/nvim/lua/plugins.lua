@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
 
   use 'lukas-reineke/indent-blankline.nvim'
 
-  use 'embear/vim-localvimrc'
+  use { 'embear/vim-localvimrc', branch = 'main' }
 
   use 'ekalinin/Dockerfile.vim'
 

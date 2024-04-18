@@ -56,3 +56,6 @@ cmp.setup.cmdline(':', {
 
 -- load rafamadriz/friendly-snippets
 require("luasnip.loaders.from_vscode").lazy_load()
+
+-- load local custom snippets
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets"}})

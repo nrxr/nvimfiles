@@ -1,0 +1,24 @@
+{
+  "MITheader": {
+    "prefix": "mitheader",
+    "description": "MIT header for individual files",
+    "body": [
+      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "",
+      "Use of this source code is governed by an MIT-style",
+      "license that can be found in the LICENSE file or at",
+      "https://opensource.org/licenses/MIT."
+    ]
+  },
+  "BSDheader": {
+    "prefix": "bsdheader",
+    "description": "BSD-style header for individual files",
+    "body": [
+      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "",
+      "Use of this source code is governed by a BSD-style",
+      "license that can be found in the LICENSE file or at",
+      "https://opensource.org/license/bsd-3-clause."
+    ]
+  }
+}

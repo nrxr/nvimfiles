@@ -1,6 +1,6 @@
 {
-  "MITheader": {
-    "prefix": "mitheader",
+  "MIT header": {
+    "prefix": "mith",
     "description": "MIT header for individual files",
     "body": [
       "Copyright © ${CURRENT_YEAR} ${0:Author}",
@@ -10,8 +10,8 @@
       "https://opensource.org/licenses/MIT."
     ]
   },
-  "BSDheader": {
-    "prefix": "bsdheader",
+  "BSD header": {
+    "prefix": "bsdh",
     "description": "BSD-style header for individual files",
     "body": [
       "Copyright © ${CURRENT_YEAR} ${0:Author}",
@@ -19,6 +19,35 @@
       "Use of this source code is governed by a BSD-style",
       "license that can be found in the LICENSE file or at",
       "https://opensource.org/license/bsd-3-clause."
+    ]
+  },
+  "GPL2 header": {
+    "prefix": "gpl2h",
+    "description": "GPLv2 header for individual files",
+    "body": [
+      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "",
+      "This program is free software; you can redistribute it and/or",
+      "modify it under the terms of the GNU General Public License",
+      "version 2 as published by the Free Software Foundation.",
+      "",
+      "This program is distributed in the hope that it will be useful,",
+      "but WITHOUT ANY WARRANTY; without even the implied warranty of",
+      "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the",
+      "GNU General Public License for more details."
+    ]
+  },
+  "Dual MIT-Apache header": {
+    "prefix": "mitapacheh",
+    "description": "Dual MIT-Apache license header",
+    "body": [
+      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "",
+      "Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or",
+      "https://www.apache.org/licenses/LICENSE-2.0> or the MIT license",
+      "<LICENSE-MIT or https://opensource.org/licenses/MIT>, at your",
+      "option. This file may not be copied, modified, or distributed",
+      "except according to those terms."
     ]
   }
 }

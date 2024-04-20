@@ -3,7 +3,7 @@
     "prefix": "mith",
     "description": "MIT header for individual files",
     "body": [
-      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "Copyright © ${CURRENT_YEAR}, ${0:Author}",
       "",
       "Use of this source code is governed by an MIT-style",
       "license that can be found in the LICENSE file or at",
@@ -14,7 +14,7 @@
     "prefix": "bsdh",
     "description": "BSD-style header for individual files",
     "body": [
-      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "Copyright © ${CURRENT_YEAR}, ${0:Author}",
       "",
       "Use of this source code is governed by a BSD-style",
       "license that can be found in the LICENSE file or at",
@@ -25,7 +25,7 @@
     "prefix": "gpl2h",
     "description": "GPLv2 header for individual files",
     "body": [
-      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "Copyright © ${CURRENT_YEAR}, ${0:Author}",
       "",
       "This program is free software; you can redistribute it and/or",
       "modify it under the terms of the GNU General Public License",
@@ -41,7 +41,7 @@
     "prefix": "mitapacheh",
     "description": "Dual MIT-Apache license header",
     "body": [
-      "Copyright © ${CURRENT_YEAR} ${0:Author}",
+      "Copyright © ${CURRENT_YEAR}, ${0:Author}",
       "",
       "Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or",
       "https://www.apache.org/licenses/LICENSE-2.0> or the MIT license",

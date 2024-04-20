@@ -2,7 +2,7 @@
   "License Attribution": {
     "prefix": "licenseattr",
     "body": [
-      "Copyright © ${CURRENT_YEAR} ${0:Author}.",
+      "Copyright © ${CURRENT_YEAR}, ${0:Author}.",
       "",
       "This software is distributed under the terms of the ${1:MIT} license.",
       "",

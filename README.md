@@ -4,8 +4,8 @@ These are configurations for `nvim`.
 
 Run on a sh-compatible terminal (for a quick install):
 
-```console
-foo@bar:~$ sh ./install.sh
+```sh
+sh ./install.sh
 ```
 
 This will install (hopefully) `rcm` if you don't have it and then configure
@@ -21,26 +21,26 @@ voidlinux), then:
 
 Clone into your terminal:
 
-```console
+```sh
 git clone git://github.com/nrxr/nvimfiles.git \
   ~/code/src/github.com/nrxr/nvimfiles
 ```
 
 Install [`rcm`](https://github.com/thoughtbot/rcm):
 
-```console
+```sh
 # macOS
-foo@bar:~$ brew tap thoughtbot/formulae
-foo@bar:~$ brew install rcm
+brew tap thoughtbot/formulae
+brew install rcm
 
 # voidlinux
-foo@bar:~$ sudo xbps-install -S rcm
+sudo xbps-install -S rcm
 ```
 
 ## Installing the `nvim` configuration files with `rcm`
 
-```console
-foo@bar:~$ rcup -d $HOME/code/src/github.com/nrxr/nvimfiles \
+```sh
+rcup -d $HOME/code/src/github.com/nrxr/nvimfiles \
   -v -t nvim \
   -x README*.md -x LICENSE -x pre-setup.sh -x install.sh
 ```

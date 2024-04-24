@@ -17,6 +17,5 @@ require('indentline')
 require('lualine-setup')
 require('markdown-setup')
 require('lvimrc-setup')
-require('vimgo-setup')
 
 require('bufferline-setup')

@@ -56,8 +56,6 @@ return require('packer').startup(function(use)
   use 'leafgarland/typescript-vim'
   use 'jparise/vim-graphql'
 
-  use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
-
   use 'junegunn/vim-easy-align'
 
   use 'nvim-lualine/lualine.nvim'

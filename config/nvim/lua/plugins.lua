@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
 
   -- plenary, required by a lot of plugins
   use "nvim-lua/plenary.nvim"
+  use 'nvim-tree/nvim-web-devicons'
   use {
   'nvim-telescope/telescope.nvim', branch = '0.1.x',
   }
@@ -16,6 +17,14 @@ return require('packer').startup(function(use)
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
 
   -- autocompletion
   use 'hrsh7th/cmp-nvim-lsp'
@@ -51,7 +60,7 @@ return require('packer').startup(function(use)
 
   use 'junegunn/vim-easy-align'
 
-  use 'itchyny/lightline.vim'
+  use 'nvim-lualine/lualine.nvim'
 
   use 'rhysd/vim-gfm-syntax'
   use 'mzlogin/vim-markdown-toc'

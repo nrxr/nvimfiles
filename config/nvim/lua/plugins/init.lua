@@ -47,14 +47,6 @@ return {
 
   { 'embear/vim-localvimrc', branch = 'main' },
 
-  'ekalinin/Dockerfile.vim',
-
-  'stephpy/vim-yaml',
-
-  'pangloss/vim-javascript',
-  'leafgarland/typescript-vim',
-  'jparise/vim-graphql',
-
   'junegunn/vim-easy-align',
 
   'nvim-lualine/lualine.nvim',

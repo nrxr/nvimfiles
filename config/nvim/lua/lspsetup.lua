@@ -32,10 +32,10 @@ lspconfig.ccls.setup{
 -- gopls configuration
 -- ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-v050
 lspconfig.gopls.setup{
-	cmd = {'gopls'},
+  cmd = {'gopls'},
   filetypes = {"go", "gomod", "gowork", "gotmpl"},
-	capabilities = capabilities,
-	-- for postfix snippets and analyzers
+  capabilities = capabilities,
+  -- for postfix snippets and analyzers
   settings = {
     gopls = {
       analyses = {
@@ -51,7 +51,7 @@ lspconfig.gopls.setup{
       usePlaceholders = true
     },
   },
-	on_attach = function(client, bufnr)
+  on_attach = function()
     vim.api.nvim_create_autocmd('BufWritePre', {
       pattern = { '*.go', 'go.mod' },
       callback = function()
@@ -68,7 +68,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   callback = function()
     vim.lsp.buf.code_action({
       context = {
-        only = { 'source.organizeImports' } 
+        only = { 'source.organizeImports' }
       },
       apply = true,
     })

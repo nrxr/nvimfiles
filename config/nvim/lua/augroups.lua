@@ -16,15 +16,6 @@ vim.api.nvim_create_autocmd(
   }
 )
 
-local dockergrp = vim.api.nvim_create_augroup("DockerFormat", {})
-vim.api.nvim_create_autocmd(
-  { 'BufNewFile', 'BufRead' }, {
-    pattern = { 'Dockerfile*' },
-    command = 'set filetype=dockerfile',
-    group   = dockergrp,
-  }
-)
-
 local gogrp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd(
   { 'BufNewFile', 'BufRead' }, {

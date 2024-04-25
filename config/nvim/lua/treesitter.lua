@@ -13,7 +13,7 @@ require('nvim-treesitter.configs').setup {
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+  sync_install = true,
 
   -- Automatically install missing parsers when entering buffer
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
@@ -24,11 +24,19 @@ require('nvim-treesitter.configs').setup {
 
     -- to disable slow treesitter highlight for large files
     disable = function(lang, buf)
-        local max_filesize = 200 * 1024 -- 200 KB
-        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-        if ok and stats and stats.size > max_filesize then
-            return true
+      local max_filesize = 300 * 1024 -- 300 KB
+      local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+      if ok and stats and stats.size > max_filesize then
+        return true
+      end
+
+      -- ignore some plugins
+      local nolangs = { 'dockerfile' }
+      for _, v in ipairs(nolangs) do
+        if lang == v then
+          return true
         end
+      end
     end,
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

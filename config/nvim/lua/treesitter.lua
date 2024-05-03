@@ -31,7 +31,7 @@ require('nvim-treesitter.configs').setup {
       end
 
       -- ignore some plugins
-      local nolangs = { 'dockerfile' }
+      local nolangs = { 'dockerfile', 'supercollider' }
       for _, v in ipairs(nolangs) do
         if lang == v then
           return true

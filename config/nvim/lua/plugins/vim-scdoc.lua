@@ -1,0 +1,3 @@
+return {
+  "gpanders/vim-scdoc",
+}

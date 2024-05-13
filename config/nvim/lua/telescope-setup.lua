@@ -4,7 +4,7 @@ require('telescope').setup{
   pickers = {
     find_files = {
       search_dirs = { -- ensuring .github is being used
-        require('telescope.utils').buffer_dir(), -- default, buffer
+        vim.loop.cwd(), -- default, cwd
         '.github', -- add .github
       },
     }

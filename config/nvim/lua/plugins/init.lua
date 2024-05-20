@@ -64,5 +64,5 @@ return {
 
   'hashivim/vim-terraform',
 
-  { 'akinsho/bufferline.nvim', version = '*' },
+  { 'akinsho/bufferline.nvim' },
 }

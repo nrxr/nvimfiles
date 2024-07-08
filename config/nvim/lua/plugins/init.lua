@@ -11,7 +11,10 @@ return {
   'nvim-telescope/telescope.nvim', branch = '0.1.x',
   },
 
-  { "folke/neodev.nvim", opts = {} },
+  {
+    'folke/lazydev.nvim',
+    ft = 'lua',
+  },
 
   {'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 

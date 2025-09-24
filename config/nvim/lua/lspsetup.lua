@@ -1,9 +1,7 @@
 -- Setup language servers.
-local lspconfig = require('lspconfig')
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lspconfig.rust_analyzer.setup {
+vim.lsp.config['rust_analyzer'] = {
   -- Server-specific settings. See `:help lspconfig-setup`
   capabilities = capabilities,
   settings = {
@@ -11,16 +9,16 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
-lspconfig.terraformls.setup{
+vim.lsp.config['terraformls'] = {
   capabilities = capabilities,
 }
 
-lspconfig.lua_ls.setup{
+vim.lsp.config['lua_ls'] ={
   capabilities = capabilities,
 }
 
 -- C, C++ LSP server.
-lspconfig.ccls.setup{
+vim.lsp.config['ccls'] ={
   capabilities = capabilities,
   init_options = {
     cache = {
@@ -31,7 +29,7 @@ lspconfig.ccls.setup{
 
 -- gopls configuration
 -- ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-v050
-lspconfig.gopls.setup{
+vim.lsp.config['gopls'] ={
   cmd = {'gopls'},
   filetypes = {"go", "gomod", "gowork", "gotmpl"},
   capabilities = capabilities,
@@ -85,6 +83,8 @@ vim.api.nvim_create_autocmd('BufWritePre',{
     vim.lsp.buf.format({async = false})
   end
 })
+
+vim.lsp.enable({'lua_ls', 'gopls', 'rust_analyzer', 'terraformls', 'ccls'})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

@@ -13,7 +13,23 @@ vim.lsp.config['terraformls'] = {
   capabilities = capabilities,
 }
 
-vim.lsp.config['lua_ls'] ={
+vim.lsp.config['lua_ls'] = {
+  on_init = function(client)
+    client.config.settings.Lua = vim.tbl_deep_extend(
+      'force',
+      client.config.settings.Lua,
+      {
+        workspace = {
+          checkThirdParty = false,
+          library = {
+            vim.env.VIMRUNTIME
+          }
+        }
+    })
+  end,
+  settings = {
+    Lua = {}
+  },
   capabilities = capabilities,
 }
 

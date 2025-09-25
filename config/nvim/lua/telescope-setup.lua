@@ -1,6 +1,11 @@
 -- You dont need to set any of these options. These are the default ones. Only
 -- the loading is important
 require('telescope').setup{
+  defaults = vim.tbl_extend(
+    "force",
+    require('telescope.themes').get_dropdown(),
+    {}
+  ),
   pickers = {
     find_files = {
       search_dirs = { -- ensuring .github is being used

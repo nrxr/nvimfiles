@@ -61,4 +61,4 @@ vim.o.softtabstop = 2
 vim.o.smarttab = true -- insert tabs at the start of a line according to shiftwidth, not tabstop.
 vim.o.showbreak = '↪ '
 vim.o.list = true
-vim.o.listchars = 'tab:┆ ,nbsp:␣,trail:↲,extends:⟩,precedes:⟨'
+vim.o.listchars = 'tab:│ ,nbsp:␣,trail:↲,extends:⟩,precedes:⟨'

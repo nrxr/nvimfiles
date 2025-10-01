@@ -52,7 +52,7 @@ require("catppuccin").setup({
 -- vim.cmd.colorscheme "catppuccin"
 
 require("tokyonight").setup({
-  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  style = "night", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
@@ -72,4 +72,4 @@ require("tokyonight").setup({
   lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 })
 vim.o.background = "dark"
-vim.cmd.colorscheme "tokyonight-storm"
+vim.cmd.colorscheme "tokyonight-night"

@@ -54,7 +54,6 @@ return {
 
   'nvim-lualine/lualine.nvim',
 
-  'rhysd/vim-gfm-syntax',
   'mzlogin/vim-markdown-toc',
 
   -- 'Mofiqul/vscode.nvim'

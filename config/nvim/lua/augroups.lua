@@ -11,10 +11,20 @@ local ronngrp = vim.api.nvim_create_augroup("RonnFormat", {})
 vim.api.nvim_create_autocmd(
   { 'BufNewFile', 'BufRead' }, {
     pattern = { '*.ronn' },
-    command = 'set expandtab tw=80 filetype=markdown',
+    command = 'set ft=markdown expandtab sw=2 ts=2 sts=2 tw=80',
     group   = ronngrp,
   }
 )
+
+local mdgrp = vim.api.nvim_create_augroup("MarkdownFormat", {})
+vim.api.nvim_create_autocmd(
+  { 'BufNewFile', 'BufRead' }, {
+    pattern = { '*.md' },
+    command = 'set ft=markdown expandtab sw=2 ts=2 sts=2 tw=80',
+    group   = mdgrp,
+  }
+)
+
 
 local gogrp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd(

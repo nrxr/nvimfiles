@@ -34,3 +34,30 @@ vim.api.nvim_create_autocmd(
     group   = gogrp,
   }
 )
+
+local rustgrp = vim.api.nvim_create_augroup("RustFormat", {})
+vim.api.nvim_create_autocmd(
+	{ 'BufNewFile', 'BufRead' }, {
+		pattern = { '*.rs' },
+		command = 'set tw=80',
+		group   = rustgrp,
+	}
+)
+
+local makegrp = vim.api.nvim_create_augroup("MakefileFormat", {})
+vim.api.nvim_create_autocmd(
+	{ 'BufNewFile', 'BufRead' }, {
+		pattern = { 'Makefile' },
+		command = 'set noexpandtab sw=4 ts=4 sts=4 tw=80',
+		group   = makegrp,
+	}
+)
+
+local tfgrp = vim.api.nvim_create_augroup("TerraformFormat", {})
+vim.api.nvim_create_autocmd(
+	{ 'BufNewFile', 'BufRead' }, {
+		pattern = { '*.tf', '*.tfstate', '*.tfbackend', '*.tfvars' },
+		command = 'set expandtab sw=2 tw=2 sts=2 tw=80',
+		group   = tfgrp,
+	}
+)

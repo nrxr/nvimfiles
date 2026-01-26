@@ -67,4 +67,6 @@ return {
   'hashivim/vim-terraform',
 
   { 'akinsho/bufferline.nvim' },
+
+  { 'jidn/vim-dbml' },
 }

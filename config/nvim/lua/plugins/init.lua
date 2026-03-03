@@ -52,8 +52,6 @@ return {
 
   'junegunn/vim-easy-align',
 
-  'nvim-lualine/lualine.nvim',
-
   'mzlogin/vim-markdown-toc',
 
   -- 'Mofiqul/vscode.nvim'

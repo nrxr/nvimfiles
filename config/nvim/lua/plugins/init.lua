@@ -55,7 +55,7 @@ return {
 
   -- 'Mofiqul/vscode.nvim'
   -- 'marko-cerovac/material.nvim'
-  { 'catppuccin/nvim', name = 'catppuccin' },
+  { 'catppuccin/nvim', name = 'catppuccin', enabled = false },
 
   'dag/vim-fish',
 

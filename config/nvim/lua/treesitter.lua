@@ -2,18 +2,102 @@ local ts = require('nvim-treesitter')
 
 ts.setup {}
 
+-- Register custom parsers (monorepo with subdirectories)
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'TSUpdate',
+  callback = function()
+    local parsers = require('nvim-treesitter.parsers')
+
+    parsers.asciidoc = {
+      install_info = {
+        branch = "master",
+        queries = "queries/asciidoc/",
+        requires = { "asciidoc_inline" },
+        url = 'https://github.com/cathaysia/tree-sitter-asciidoc',
+        location = 'tree-sitter-asciidoc',
+      },
+    }
+
+    parsers.asciidoc_inline = {
+      install_info = {
+        branch = "master",
+        url = 'https://github.com/cathaysia/tree-sitter-asciidoc',
+        location = 'tree-sitter-asciidoc_inline',
+        queries = "queries/asciidoc_inline",
+      },
+    }
+  end,
+})
+
 -- Install parsers (async, skips already-installed)
 ts.install {
-  "c", "lua", "vim", "vimdoc", "query", "asm", "bash", "bibtex", "comment",
-  "cmake", "cpp", "css", "diff", "fish", "git_config", "git_rebase",
-  "gitattributes", "gitcommit", "gitignore", "go", "gomod", "gosum",
-  "gotmpl", "gowork", "gpg", "graphql", "hare", "haskell",
-  "haskell_persistent", "hcl", "html", "http", "ini", "javascript", "jq",
-  "jsdoc", "json", "json5", "latex", "llvm", "luadoc", "make", "markdown",
-  "markdown_inline", "matlab", "objc", "ocaml", "ocaml_interface",
-  "ocamllex", "proto", "python", "r", "regex", "ron", "rust", "sql",
-  "ssh_config", "terraform", "tmux", "toml", "typescript", "vhs", "xml",
-  "yaml", "zig",
+  "asciidoc",
+  "asciidoc_inline",
+  "asm",
+  "bash",
+  "bibtex",
+  "c",
+  "cmake",
+  "comment",
+  "cpp",
+  "css",
+  "diff",
+  "fish",
+  "git_config",
+  "git_rebase",
+  "gitattributes",
+  "gitcommit",
+  "gitignore",
+  "go",
+  "gomod",
+  "gosum",
+  "gotmpl",
+  "gowork",
+  "gpg",
+  "graphql",
+  "hare",
+  "haskell",
+  "haskell_persistent",
+  "hcl",
+  "html",
+  "http",
+  "ini",
+  "javascript",
+  "jq",
+  "jsdoc",
+  "json",
+  "json5",
+  "latex",
+  "llvm",
+  "lua",
+  "luadoc",
+  "make",
+  "markdown",
+  "markdown_inline",
+  "matlab",
+  "objc",
+  "ocaml",
+  "ocaml_interface",
+  "ocamllex",
+  "proto",
+  "python",
+  "query",
+  "r",
+  "regex",
+  "ron",
+  "rust",
+  "sql",
+  "ssh_config",
+  "terraform",
+  "tmux",
+  "toml",
+  "typescript",
+  "vhs",
+  "vim",
+  "vimdoc",
+  "xml",
+  "yaml",
+  "zig",
 }
 
 -- Languages to exclude from treesitter highlighting

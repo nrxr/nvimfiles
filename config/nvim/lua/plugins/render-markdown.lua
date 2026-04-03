@@ -1,7 +1,6 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
   ft = "markdown",
-  enabled = false,
   ---@type render.md.UserConfig
   opts = {
     bullet = { left_pad = 0, right_pad = 1 },

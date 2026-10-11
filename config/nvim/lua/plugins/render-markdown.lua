@@ -10,7 +10,7 @@ return {
     code = { width = "block", left_pad = 2, right_pad = 2, border = "none" },
     completions = { lsp = { enabled = true } },
     -- empty icons keeps the # markers visible
-    heading = { width = "block", left_pad = 1, right_pad = 1, position = "inline" },
+    heading = { width = "block", left_pad = 1, right_pad = 1, position = "inline", icons = {} },
     pipe_table = { border = { "╭", "┬", "╮", "├", "┼", "┤", "╰", "┴", "╯", "│", "─" } },
     sign = { enabled = false },
   },

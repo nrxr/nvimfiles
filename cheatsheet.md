@@ -42,9 +42,41 @@ Source: `config/nvim/lua/lspsetup.lua`
 | Mode | Key | What it does |
 | --- | --- | --- |
 | `n` | `<space>e` | Open a floating diagnostic message at the cursor. |
-| `n` | `[d` | Jump to the previous diagnostic. |
-| `n` | `]d` | Jump to the next diagnostic. |
+| `n` | `[d` | Jump to the previous diagnostic (`vim.diagnostic.jump`). |
+| `n` | `]d` | Jump to the next diagnostic (`vim.diagnostic.jump`). |
 | `n` | `<space>q` | Put diagnostics into the location list. |
+| `n` | `<C-w>d` | Neovim built-in default (0.10+): same float as `<space>e`. |
+
+These mappings are global, so they work in any buffer, including the Lazy
+window.
+
+### Statusline diagnostics indicator
+
+Source: `config/nvim/lua/plugins/lualine.lua`
+
+The icons after the mode in the statusline (for example `⚠ 2 ⓘ 40`) are
+lualine's `diagnostics` component. They count the error, warning, info and hint
+diagnostics in the **current buffer**. To read them, press `]d` / `[d` to jump
+to one, then `<space>e` to see its message.
+
+In a code buffer these are usually LSP diagnostics. In the Lazy window
+(`:Lazy`), lazy.nvim adds its own diagnostics:
+
+| Severity | Message | Meaning |
+| --- | --- | --- |
+| Warning | `Breaking Changes` | A pulled commit is marked breaking (`type(scope)!:`). Read the commit on that line. |
+| Warning | `needs build` / `<task> warning` | A plugin build or task needs attention. |
+| Error | `<task> failed` | A plugin task (clone, checkout, build) failed. |
+| Info | `updated from X to Y`, `updated to <version>`, `already up to date`, `updates available` | Per-plugin status notes. |
+
+These are also shown inline as `■ <message>` at the end of each line.
+
+Lazy clears its diagnostics when the window closes. To see them again, run
+`:Lazy log` (or press `L` inside Lazy). This rebuilds the
+"Breaking Changes" section from git history. By default it only looks at each
+plugin's last 8 commits, so an older breaking commit may not appear. To widen
+that window, pass options to the setup call in `config/nvim/init.lua`, for
+example `require("lazy").setup("plugins", { git = { log = { "--since=3 weeks ago" } } })`.
 
 ## LSP
 

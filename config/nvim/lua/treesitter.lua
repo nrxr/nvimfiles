@@ -2,6 +2,25 @@ local ts = require('nvim-treesitter')
 
 ts.setup {}
 
+-- Work around a PCRE-only group in cathaysia/tree-sitter-asciidoc's injections.
+-- Neovim uses Vim regexes for #not-match?; (?:...) raises E866. Remove the
+-- redundant group and let the query decode the newline escape for both regex
+-- engines. This becomes a no-op once upstream fixes the pattern.
+do
+  local queries = {}
+  for _, path in ipairs(vim.treesitter.query.get_files('asciidoc', 'injections')) do
+    queries[#queries + 1] = table.concat(vim.fn.readfile(path), '\n')
+  end
+  local incompatible = [=[(^|\\n)\\[\\s*source\\s*(?:[,#.%\\]])]=]
+  local compatible = [=[(^|\n)\\[\\s*source\\s*[,#.%\\]]]=]
+  local query, replacements = table.concat(queries, '\n'):gsub(vim.pesc(incompatible), function()
+    return compatible
+  end)
+  if replacements > 0 then
+    vim.treesitter.query.set('asciidoc', 'injections', query)
+  end
+end
+
 -- Register custom parsers (monorepo with subdirectories)
 vim.api.nvim_create_autocmd('User', {
   pattern = 'TSUpdate',

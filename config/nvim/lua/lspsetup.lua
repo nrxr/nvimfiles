@@ -141,4 +141,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- disable logging
-vim.lsp.set_log_level("off")
+-- vim.lsp.set_log_level("off")

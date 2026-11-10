@@ -108,6 +108,7 @@ require("cyberdream").setup({
         -- Comment = { fg = "#696969", bg = "NONE", italic = true },
 
         -- More examples can be found in `lua/cyberdream/extensions/*.lua`
+      CursorLine = { bg = "#DED7EC" },
     },
        -- Disable or enable colorscheme extensions
     extensions = {
